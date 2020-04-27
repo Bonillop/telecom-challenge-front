@@ -9,12 +9,6 @@ const SeachForm = props => {
   const [cityInput, setCityInput] = useState("");
 
   const [city, setCity] = useState("");
-  const [temp, setTemp] = useState("");
-  const [tempMin, setTempMin] = useState("");
-  const [tempMax, setTempMax] = useState("");
-  const [humidity, setHumidity] = useState("");
-  const [feelsLike, setFeelsLike] = useState("");
-
   const [results, setResults] = useState([]);
 
   const [isLoading, setIsLoading] = useState(false);
@@ -33,14 +27,8 @@ const SeachForm = props => {
     if (data.error) {
       setError(data.error);
     } else {
-      console.log(data);
       setResults([data]);
       setCity(data.name);
-      // setTemp(data.main.temp);
-      // setFeelsLike(data.main.feels_like);
-      // setTempMin(data.main.temp_min);
-      // setTempMax(data.main.temp_max);
-      // setHumidity(data.main.humidity);
     }
   }
 
@@ -53,7 +41,6 @@ const SeachForm = props => {
     if (data.error) {
       setError(data.error);
     } else {
-      console.log(data.list);
       setResults(data.list);
       setCity(data.city.name);
     }
@@ -61,18 +48,12 @@ const SeachForm = props => {
 
   const resetState = () => {
     setCity("");
-    setTemp("");
-    setFeelsLike("");
-    setTempMin("");
-    setTempMax("");
-    setHumidity("");
     setResults([]);
     setIsLoading(false);
     setError(false);
   }
 
   useEffect(() => {
-    console.log("componente cargado");
     return () => {
       resetState();
     }
@@ -99,11 +80,6 @@ const SeachForm = props => {
           error={error}
           results={results}
           city={city}
-          temp={temp}
-          tempMin={tempMin}
-          tempMax={tempMax}
-          humidity={humidity}
-          feelsLike={feelsLike}
         />
       </React.Fragment>
     )
