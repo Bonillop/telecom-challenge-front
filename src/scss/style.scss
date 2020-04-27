@@ -1,0 +1,64 @@
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wrapper {
+  margin: 5vw auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary {
+  max-width: 90vw;
+}
+
+.form{
+  width: 40vw;
+}
+
+.navBar {
+  display: flex;
+  width: 100%;
+  height: 7vh;
+  background-color: #20232a;
+  color: #ffffff;
+  margin: 0;
+  padding-left: 1vw;
+  padding-right: 5vw;
+  vertical-align: middle;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+  }
+  
+  .title {
+    margin-left: 1vw;
+    color: #ffffff;
+  }
+  
+  .links {
+    justify-content: center;
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2vw;
+    
+    a {
+      margin: 2vw;
+      color: #aaaaaa;
+      font-size: 20px;
+      text-decoration: none;
+      &:hover {
+        color: #ffffff;
+      }
+    }
+  }
+
+}
