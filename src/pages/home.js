@@ -1,8 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import NavBar from "../components/navbar/navbar";
 import PageContent from "../components/pageContent/pageContent"
-
-import history from "../utils/history";
 
 const PageHome = () => {
 

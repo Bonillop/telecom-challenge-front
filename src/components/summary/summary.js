@@ -8,7 +8,7 @@ const Summary = props => {
   const parseDate = (timestamp) => {
     const date = new Date(timestamp * 1000);
     const day = date.getUTCDate();
-    if (day != currentDay) {
+    if (day !== currentDay) {
       currentDay = day;
       const month = date.getUTCMonth() + 1;
       const year = date.getUTCFullYear();
@@ -38,6 +38,7 @@ const Summary = props => {
                 </p>
               )
             }
+            return null;
           })}
         </div>
       )
